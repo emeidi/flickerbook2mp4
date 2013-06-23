@@ -16,7 +16,7 @@ do
    for FILE in 0*.$EXT
    do
       let COUNTER+=1
-      ln -s "$FILE" "$COUNTER.jpg"
+      ln -s "$FILE" "$COUNTER.$EXT"
    done
 
 done
