@@ -2,6 +2,10 @@
 
 FFMPEG=`which ffmpeg`
 
-$FFMPEG -f image2 -r 5 -pattern_type glob -i '*.jpg' -c:v libx264 stephanie-bell.mp4
+FRAMESPERSEC=5
+EXT="jpg" # pay attention to lower- and uppercase
+DEST="flickerbook.mp4"
+
+$FFMPEG -f image2 -r $FRAMESPERSEC -pattern_type glob -i '*.$EXT' -c:v libx264 "$DEST"
 
 exit 0
